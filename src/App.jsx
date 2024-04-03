@@ -12,10 +12,10 @@ function App() {
     <main>
         <div id='game-container'>
             <ol id='players' className='highlight-player'>
-              <Player intialName="Player1" playerSymbol='O'/>
-              <Player intialName="Player2" playerSymbol='X'/>
+              <Player intialName="Player1" playerSymbol='O' isActive={activePlayer == "X"}/>
+              <Player intialName="Player2" playerSymbol='X' isActive={activePlayer == "O"}/>
             </ol>
-            <GameBoard onSelectSquare={handleSelectSquare}/>
+            <GameBoard onSelectSquare={handleSelectSquare} activePlayerSymbol={activePlayer}/>
         </div>
         LOG
     </main>
